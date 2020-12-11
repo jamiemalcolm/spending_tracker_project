@@ -8,3 +8,6 @@ class TestMerchant(unittest.TestCase):
 
     def test_merchant_has_name(self):
         self.assertEqual("Sainsbury's", self.merchant.name)
+
+    def test_merchant_has_active(self):
+        self.assertEqual(True, self.merchant.active)
