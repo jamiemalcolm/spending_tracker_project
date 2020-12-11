@@ -12,3 +12,6 @@ class TestTransaction(unittest.TestCase):
 
     def test_transaction_has_tag(self):
         self.assertEqual("Groceries", self.transaction.tag)
+
+    def test_transaction_has_amount(self):
+        self.assertEqual(4.59, self.transaction.amount)
