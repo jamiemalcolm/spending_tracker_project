@@ -9,3 +9,6 @@ class TestTransaction(unittest.TestCase):
 
     def test_transaction_has_merchant(self):
         self.assertEqual("Sainsbury's", self.transaction.merchant)
+
+    def test_transaction_has_tag(self):
+        self.assertEqual("Groceries", self.transaction.tag)
