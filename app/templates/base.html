@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spending Tracker</title>
+</head>
+
+<body>
+    <main>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/home">Home</a>
+                </li>
+                <li>
+                    <a href="/transactions">Transactions</a>
+                </li>
+                <li>
+                    <a href="/tags">Categories</a>
+                </li>
+                <li>
+                    <a href="/merchants">Merchants</a>
+                </li>
+                <li>
+                    <a href="/total">Total Spend</a>
+                </li>
+            </ul>
+        </nav>
+        <section id="content">
+            {% block content $}
+
+            {% endblock %}
+        </section>
+    </main>
+</body>
+
+</html>
