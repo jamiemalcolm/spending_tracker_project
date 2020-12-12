@@ -22,6 +22,9 @@ tag_repository.save(tag_1)
 tag_2 = Tag("Bills")
 tag_repository.save(tag_2)
 
-amount_1 = 14.99
-transaction_1 = Transaction(merchant_1, tag_1, amount_1)
+
+transaction_1 = Transaction(merchant_1, tag_1, 14.99)
 transaction_repository.save(transaction_1)
+
+transaction_2 = Transaction(merchant_2, tag_2, 50.51)
+transaction_repository.save(transaction_2)

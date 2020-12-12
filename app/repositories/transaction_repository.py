@@ -16,11 +16,42 @@ def save(transaction):
     transaction.id = id
     return transaction
 # select all 
+def select_all():
+    transactions = []
+
+    sql = "SELECT * FROM transactions"
+    results = run_sql(sql)
+
+    for row in results:
+        merchant = merchant_repository.select(row['merchant_id'])
+        tag = tag_repository.select(row['tag_id'])
+        transaction = Transaction(merchant, tag, row['amount'], row['id'])
+        transactions.append(transaction)
+    return transactions
 
 # select by id 
+def select(id):
+    transaction = None
+    sql = "SELECT * FROM transactions WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)
 
+    if result is not None:
+        merchant = merchant_repository.select(result['merchant_id'])
+        tag = tag_repository.select(result['tag_id'])
+        transaction = Transaction(merchant, tag, result['amount'], result['id'])
+    return transaction
 # delete all 
-
+def delete_all():
+    sql = "DELETE FROM transactions"
+    run_sql(sql)
 #delete by id 
-
+def delete(id):
+    sql = "DELETE FROM transactions WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
 # update 
+def update(transaction):
+    sql = "UPDATE transactions SET (merchant_id, tag_id, amount) = (%s, %s, %s) WHERE id = %s"
+    values = [transaction.merchant.id, transaction.tag.id, transaction.amount, transaction.id]
+    run_sql(sql, values) 
