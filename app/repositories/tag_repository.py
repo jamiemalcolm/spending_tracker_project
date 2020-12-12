@@ -32,7 +32,7 @@ def select(id):
 
     sql = "SELECT * FROM tags WHERE id = %s"
     values = [id]
-    result = run_sql(sql, values)
+    result = run_sql(sql, values)[0]
 
     if result is not None:
         tag = Tag(result['category'], result['active'], result['id'])
