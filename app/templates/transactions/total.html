@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>the total of all your transactions is</h1>
+
+{% for transaction in transactions %}
+
+{{ transaction.amount }}
+
+{% endfor %}
+
+£{{total}}
+
+{% endblock %}

@@ -5,3 +5,9 @@ class Transaction:
         self.tag = tag
         self.amount = amount
         self.id = id
+
+    
+    
+    # def convert_to_pennies(self, amount):
+    #     before = int(amount * 100)
+    #     return before        

@@ -55,3 +55,17 @@ def update(transaction):
     sql = "UPDATE transactions SET (merchant_id, tag_id, amount) = (%s, %s, %s) WHERE id = %s"
     values = [transaction.merchant.id, transaction.tag.id, transaction.amount, transaction.id]
     run_sql(sql, values) 
+
+def total():
+    transactions = []
+
+    sql = "SELECT * FROM transactions"
+    results = run_sql(sql)
+
+    for row in results:
+        merchant = merchant_repository.select(row['merchant_id'])
+        tag = tag_repository.select(row['tag_id'])
+        transaction = Transaction(merchant, tag, row['amount'], row['id'])
+        pennies = int(transaction.amount * 100)
+        transactions.append(pennies)
+    return transactions

@@ -13,3 +13,29 @@ transactions_blueprint = Blueprint("transactions", __name__)
 def transactions():
     transactions = transaction_repository.select_all()
     return render_template("transactions/index.html", transactions=transactions)
+
+@transactions_blueprint.route("/transactions/new")
+def new_transaction():
+    merchants = merchant_repository.select_all()
+    tags = tag_repository.select_all()
+    return render_template("transactions/new.html", merchants = merchants, tags = tags)
+
+@transactions_blueprint.route("/transactions/new", methods=['POST'])
+def log_new_transaction():
+    merchant_id = request.form['merchant-name']
+    tag_id = request.form['tag-category']
+    amount = request.form['amount']
+
+    merchant = merchant_repository.select(merchant_id)
+    tag = tag_repository.select(tag_id)
+    transaction = Transaction(merchant, tag, amount)
+    transaction_repository.save(transaction)
+
+    return redirect("/transactions")
+
+@transactions_blueprint.route("/total")
+def total():
+    transactions = transaction_repository.select_all()
+    all_amounts = transaction_repository.total()
+    total = sum(all_amounts) / 100
+    return render_template("/transactions/total.html", transactions = transactions, total = total)
