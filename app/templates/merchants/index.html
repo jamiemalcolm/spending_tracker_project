@@ -9,8 +9,7 @@
 <section class="merchant">
     <ul>
         <li>
-            {{ merchant.name }}
-        </li>
+            <a href="/merchants/{{ merchant.id }}"> {{ merchant.name }} </a> </li>
         <li>
             {% if merchant.active == True %}
             active

@@ -23,3 +23,10 @@ def create_new_merchant():
 
     return redirect("/merchants")
 
+@merchants_blueprint.route("/merchants/<id>", methods=['GET'])
+def show_this_merchant(id):
+    merchant = merchant_repository.select(id)
+    return render_template("/merchants/show.html", merchant = merchant)    
+
+
+# create edit route and allow user to edit merchant delete and edit active status 

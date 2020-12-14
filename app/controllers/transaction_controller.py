@@ -39,3 +39,8 @@ def total():
     all_amounts = transaction_repository.total()
     total = sum(all_amounts) / 100
     return render_template("/transactions/total.html", transactions = transactions, total = total)
+
+
+
+
+# create edit route and allow the user to edit transaction ie delete it 

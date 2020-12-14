@@ -23,3 +23,5 @@ def create_new_tag():
     tag_repository.save(tag)
 
     return redirect("/tags")
+
+# add edit route and allow user to edit tag, make active false and/or delete

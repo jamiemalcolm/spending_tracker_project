@@ -2,12 +2,13 @@
 {% block content %}
 <h1>the total of all your transactions is</h1>
 
-{% for transaction in transactions %}
+<div class="amounts">
+    {% for transaction in transactions %}
+    {{ transaction.amount }}
 
-{{ transaction.amount }}
-
-{% endfor %}
-
-£{{total}}
-
+    {% endfor %}
+</div>
+<div class="total">
+    £{{total}}
+</div>
 {% endblock %}

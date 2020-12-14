@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="merchant">
+    <ul>
+        <li>
+            {{ merchant.name }} </li>
+        <li>
+            {% if merchant.active == True %}
+            active
+            {% else %}
+            deactive
+            {% endif %}
+        </li>
+    </ul>
+</section>
+
+{% endblock %}
