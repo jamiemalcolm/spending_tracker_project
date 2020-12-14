@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="/tags/{{tag.id}}" method="post">
+    <div class="new-tag">
+        <label for="tag-category">Category of Spending?:</label>
+        <input type="text" name="category" value="{{tag.category}}"" id=" tag-category" min="2" max="20">
+        <label for="active">Is this tag still Active?</label>
+        <select id="active" name="active">
+            <option value="true" {% if tag.active == True %} selected="selected" {% endif %}>Y</option>
+            <option value="false" {% if tag.active == False %} selected="selected" {% endif %}>N</option>
+        </select>
+        <button type="submit">Update Tag</button>
+    </div>
+</form>
+
+{% endblock %}
