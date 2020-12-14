@@ -18,6 +18,9 @@
             {% endif %}
         </li>
     </ul>
+    <form class="delete" action="/merchants/{{merchant.id}}/delete" method="POST">
+        <button>Delete Merchant</button>
+    </form>
 </section>
 {% endfor %}
 <section class="new">
