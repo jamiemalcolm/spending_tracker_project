@@ -13,24 +13,28 @@
         <nav>
             <ul>
                 <li>
-                    <a href="/">Home</a>
+                    <a class="logo" href="/"><img src="https://picsum.photos/175/175"></a>
                 </li>
                 <li>
-                    <a href="/transactions">Transactions</a>
+                    <h1 class="top-box">Spending Tracker</h1>
                 </li>
                 <li>
-                    <a href="/tags">Categories</a>
+                    <a class="box_1" href="/transactions">Transactions</a>
                 </li>
                 <li>
-                    <a href="/merchants">Merchants</a>
+                    <a class="box_2" href="/tags">Categories</a>
                 </li>
                 <li>
-                    <a href="/total">Total Spend</a>
+                    <a class="box_3" href="/merchants">Merchants</a>
+                </li>
+                <li>
+                    <a class="box_4" href="/total">Total Spend</a>
                 </li>
             </ul>
         </nav>
         <section id="content">
             {% block content %}
+
 
             {% endblock %}
         </section>

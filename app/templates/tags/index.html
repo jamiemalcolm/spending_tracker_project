@@ -19,9 +19,12 @@
             {% endif %}
         </li>
     </ul>
+    <form class="delete" action="/tags/{{tag.id}}/delete" method="POST">
+        <button>Delete Spending Category Tag</button>
+    </form>
 </section>
 {% endfor %}
 <section class="new">
-    <a href="/tags/new">Create new merchant</a>
+    <a href="/tags/new">Create new tag</a>
 </section>
 {% endblock %}

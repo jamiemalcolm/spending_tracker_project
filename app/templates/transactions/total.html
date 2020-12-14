@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>the total of all your transactions is</h1>
+<h1>The Total Of All Your Transactions Is:</h1>
 
 <div class="amounts">
     {% for transaction in transactions %}
-    {{ transaction.amount }}
+    {{ transaction.merchant.name }}- {{ transaction.amount }}
 
     {% endfor %}
 </div>
