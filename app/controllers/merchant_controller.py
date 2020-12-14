@@ -21,5 +21,5 @@ def create_new_merchant():
     merchant = Merchant(name)
     merchant_repository.save(merchant)
 
-    return render_template("/merchants/new.html", merchants = merchants)
+    return redirect("/merchants")
 

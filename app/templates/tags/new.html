@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="/tags/new" method="post">
+    <div class="new-merchant">
+        <label for="tag-category">Category of Spending?:</label>
+        <input type="text" name="category" id="tag-category" min="2" max="20">
+    </div>
+    <button type="submit">Add Tag</button>
+
+</form>
+
+{% endblock %}
