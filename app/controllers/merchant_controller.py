@@ -36,7 +36,8 @@ def edit_merchant(id):
 @merchants_blueprint.route("/merchants/<id>", methods=['POST'])
 def update_merchant(id):
     merchant = merchant_repository.select(id)
-    
     merchant.name = request.form['name']
+    merchant.active = request.form['active']
     merchant_repository.update(merchant)
+    
     return redirect("/merchants")

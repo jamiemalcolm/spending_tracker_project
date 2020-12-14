@@ -6,9 +6,12 @@
     <div class="new-merchant">
         <label for="name">Merchant name:</label>
         <input type="text" value="{{ merchant.name }}" name="name" id="name" min="2" max="20">
-        <label for="active">Is this merchant still active?</label>
-        <input type="checkbox">
 
+        <label for="active">Is this merchant still Active?</label>
+        <select id="active" name="active">
+            <option value="true" {% if merchant.active == True %} selected="selected" {% endif %}>Y</option>
+            <option value="false" {% if merchant.active == False %} selected="selected" {% endif %}>N</option>
+        </select>
     </div>
     <button type="submit">update</button>
 
