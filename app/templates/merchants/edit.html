@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="/merchants/{{merchant.id}}" method="post">
+    <div class="new-merchant">
+        <label for="name">Merchant name:</label>
+        <input type="text" value="{{ merchant.name }}" name="name" id="name" min="2" max="20">
+        <label for="active">Is this merchant still active?</label>
+        <input type="checkbox">
+
+    </div>
+    <button type="submit">update</button>
+
+</form>
+
+{% endblock %}

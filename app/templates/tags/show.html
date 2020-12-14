@@ -1,11 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Spending Categories</h1>
 
-<p>Here are all your created spending tags</p>
-
-{% for tag in tags %}
 <section class="tag">
     <ul>
         <li>
@@ -19,9 +15,7 @@
             {% endif %}
         </li>
     </ul>
+    <p><a href="/tags/{{tag.id}}/edit">Edit</a></p>
 </section>
-{% endfor %}
-<section class="new">
-    <a href="/tags/new">Create new merchant</a>
-</section>
+
 {% endblock %}

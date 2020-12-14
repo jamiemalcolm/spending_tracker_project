@@ -30,3 +30,7 @@ transaction_2 = Transaction(merchant_3, tag_2, 50.51)
 transaction_repository.save(transaction_2)
 
 tag_repository.select(2)
+
+merchant_1.name = "google"
+
+merchant_repository.update(merchant_1)
