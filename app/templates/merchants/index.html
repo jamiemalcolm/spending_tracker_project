@@ -4,4 +4,24 @@
 <h1>Merchants</h1>
 
 <p>Here are all your Merchants you've added for tracking </p>
+
+{% for merchant in merchants %}
+<section class="merchant">
+    <ul>
+        <li>
+            {{ merchant.name }}
+        </li>
+        <li>
+            {% if merchant.active == True %}
+            active
+            {% else %}
+            deactive
+            {% endif %}
+        </li>
+    </ul>
+</section>
+{% endfor %}
+<section class="new">
+    <a href="/merchants/new">Create new merchant</a>
+</section>
 {% endblock %}

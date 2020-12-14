@@ -4,4 +4,22 @@
 <h1>Spending Categories</h1>
 
 <p>Here are all your created spending tags</p>
+
+{% for tag in tags %}
+<section class="tag">
+    <ul>
+        <li>
+            {{ tag.category }}
+        </li>
+        <li>
+            {% if tag.active == True %}
+            active
+            {% else %}
+            deactive
+            {% endif %}
+        </li>
+    </ul>
+</section>
+
+{% endfor %}
 {% endblock %}
