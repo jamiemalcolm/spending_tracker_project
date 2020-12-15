@@ -12,14 +12,13 @@ body{
     border-radius: 100px;
 
 }
-.caontainer{
-    display: flex;
-}
 #navbar{
     background-color: #BFCC94;
     flex-direction: column;
     border-radius: 18px;
 }
+
+
 .link{
     color:  #426A5A;
 }
@@ -45,15 +44,20 @@ ul{
     list-style: none;
 }
 
+.transaction_caontainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    margin: 0 auto;
+}
 .trans, .tag, .merchant, .new-merchant, .new-tag{
+    justify-content: center;
     background-color: #BFCC94;
     color: #344966;
     border-radius: 18px;
     padding: 10px;
-    margin: 20px;
-    width:45%;
-    margin-left:300px;
-    text-align: center;
+    margin: 10px;
+    width: 85%;
 }
 .new > a{
     background-color: #B4CDED;

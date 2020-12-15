@@ -1,6 +1,6 @@
 from db.run_sql import run_sql
 
-from models.transaction import Transaction, sort_newest()
+from models.transaction import *
 from models.merchant import Merchant
 from models.tag import Tag
 import repositories.merchant_repository as merchant_repository
@@ -72,16 +72,3 @@ def total():
         transactions.append(pennies)
     return transactions
 
-def sort_new():
-    transactions = []
-
-    sql = "SELECT * FROM transactions"
-    results = run_sql(sql)
-
-    for row in results:
-        merchant = merchant_repository.select(row['merchant_id'])
-        tag = tag_repository.select(row['tag_id'])
-        transaction = Transaction(merchant, tag, row['amount'], row['id'], row['time_stamp'])
-        transactions.append(transaction)
-        transactions = transactions.sort(key=sort_newest())
-    return transactions

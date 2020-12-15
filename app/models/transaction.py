@@ -8,6 +8,6 @@ class Transaction:
         self.time_stamp = time_stamp
 
 
-    def sort_newest(self, t):
-        return t['time_stamp']
+    
+
         

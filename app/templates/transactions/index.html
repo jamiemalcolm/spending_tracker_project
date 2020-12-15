@@ -10,20 +10,21 @@
 </div>
 </p>
 
-{% for transaction in transactions %}
-<section class="trans">
-    <ul>
-        <li>
-            {{ "£{:,.2f}".format(transaction.amount) }}
-        </li>
-        <li>
-            {{ transaction.merchant.name }} - {{ transaction.tag.category }}
-        </li>
-        <li>
-            {{ transaction.time_stamp.strftime("%c") }}
-        </li>
-    </ul>
-
+<section class="transaction_container">
+    {% for transaction in transactions %}
+    <section class="trans">
+        <ul>
+            <li>
+                {{ "£{:,.2f}".format(transaction.amount) }}
+            </li>
+            <li>
+                {{ transaction.merchant.name }} - {{ transaction.tag.category }}
+            </li>
+            <li>
+                {{ transaction.time_stamp.strftime("%c") }}
+            </li>
+        </ul>
+    </section>
 </section>
 {% endfor %}
 <section class="new">

@@ -35,8 +35,8 @@ def log_new_transaction():
     transaction = Transaction(merchant, tag, amount)
     transaction_repository.save(transaction)
     
-
     return redirect("/transactions")
+
 
 @transactions_blueprint.route("/total")
 def total():
@@ -46,6 +46,3 @@ def total():
     return render_template("/transactions/total.html", transactions = transactions, total = total)
 
 
-
-
-# create edit route and allow the user to edit transaction ie delete it 
