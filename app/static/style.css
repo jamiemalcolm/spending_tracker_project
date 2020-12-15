@@ -1,17 +1,9 @@
-@media only screen and (max-device-width: 480px) {
-    body{
-        width: 100%;
-    }
-    nav > ul{
-        display: flex;
-        justify-content: space-around;
-        margin-left: -20px;
-        
-    }
-}
+
 body{
     background-color:#F0F4EF;
     color: #426A5A;
+    height: 100%;
+    width: 100%;
 }
 .top-box{
     border-radius: 18px;
@@ -20,6 +12,7 @@ body{
     border-radius: 100px;
 
 }
+
 #navbar{
     display: flex;
     background-color: #BFCC94;
@@ -50,12 +43,15 @@ h1{
 ul{
     list-style: none;
 }
+
 .trans, .tag, .merchant, .new-merchant, .new-tag{
     background-color: #BFCC94;
     color: #344966;
     border-radius: 18px;
     padding: 10px;
     margin: 20px;
+    width:45%;
+    margin-left:300px;
     text-align: center;
 }
 .new > a{
@@ -63,12 +59,26 @@ ul{
     padding: 5px;
     border-radius: 18px;
     color: #426A5A;
+    text-align: center;
 }
 .total{
     font-size: 225%;
 }
-
+.tag > ul > li > a{
+    color:#426A5A;
+}
+.merchant > ul > li > a{
+    color: #426A5A;
+}
 button{
     color: #B4CDED;
     background-color: #426A5A;
+    text-align: center;
+    border-radius: 18px;
+}
+.tag > a{
+    color: #B4CDED;
+    background-color: #426A5A;
+    text-align: center;
+    border-radius: 18px;
 }

@@ -9,7 +9,8 @@
 <section class="merchant">
     <ul>
         <li>
-            <a href="/merchants/{{ merchant.id }}"> {{ merchant.name }} </a> </li>
+            <a href="/merchants/{{ merchant.id }}"> {{ merchant.name }} </a>
+        </li>
         <li>
             {% if merchant.active == True %}
             active
@@ -17,10 +18,13 @@
             deactive
             {% endif %}
         </li>
+        <li>
+            <form class="delete" action="/merchants/{{merchant.id}}/delete" method="POST">
+                <button>Delete Merchant</button>
+            </form>
+
+        </li>
     </ul>
-    <form class="delete" action="/merchants/{{merchant.id}}/delete" method="POST">
-        <button>Delete Merchant</button>
-    </form>
 </section>
 {% endfor %}
 <section class="new">

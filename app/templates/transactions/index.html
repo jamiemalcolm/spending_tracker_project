@@ -3,9 +3,10 @@
 {% block content %}
 <h1>Transactions</h1>
 
-<p>Here are all of your Transactions, your running total is:
+<p>Here are all of your Transactions</p>
+<p>Your Running Total Is: </p>
 <div class="total">
-    £{{total}}
+    {{"£{:,.2f}".format(total)}}
 </div>
 </p>
 
@@ -16,7 +17,7 @@
             {{ transaction.merchant.name }} - {{ transaction.tag.category }}
         </li>
         <li>
-            {{ transaction.amount }}
+            {{ "£{:,.2f}".format(transaction.amount) }}
         </li>
         <li>
             {{ transaction.time_stamp.strftime("%c") }}
