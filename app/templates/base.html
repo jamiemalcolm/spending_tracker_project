@@ -10,28 +10,28 @@
 
 <body>
     <main>
-        <nav>
-            <ul>
-                <li>
-                    <a class="logo" href="/"><img src="https://picsum.photos/175/175"></a>
-                </li>
-                <li>
-                    <h1 class="top-box">Spending Tracker</h1>
-                </li>
-                <li>
-                    <a class="box_1" href="/transactions">Transactions</a>
-                </li>
-                <li>
-                    <a class="box_2" href="/tags">Categories</a>
-                </li>
-                <li>
-                    <a class="box_3" href="/merchants">Merchants</a>
-                </li>
-                <li>
-                    <a class="box_4" href="/total">Total Spend</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1 class="top-box">Spending Tracker</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a class="logo" href="/"><img src="https://picsum.photos/175/175"></a>
+                    </li>
+                    <li>
+                        <a class="box_1" href="/transactions">Transactions</a>
+                    </li>
+                    <li>
+                        <a class="box_2" href="/tags">Categories</a>
+                    </li>
+                    <li>
+                        <a class="box_3" href="/merchants">Merchants</a>
+                    </li>
+                    <li>
+                        <a class="box_4" href="/total">Total Spend</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
         <section id="content">
             {% block content %}
 

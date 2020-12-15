@@ -1,11 +1,18 @@
+html{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
 body{
     background-color:#F0F4EF;
     color: #426A5A;
     display: grid;
 }
+#top-box{
+    
+}
+
 img{
     border-radius: 100px;
 }
-#top-box{
-    grid-column-start: span 1fr;
-}
+

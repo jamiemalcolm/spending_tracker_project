@@ -6,6 +6,8 @@ from models.merchant import Merchant
 import repositories.transaction_repository as transaction_repository
 import repositories.tag_repository as tag_repository
 import repositories.merchant_repository as merchant_repository
+import datetime
+
 
 transactions_blueprint = Blueprint("transactions", __name__)
 
@@ -32,6 +34,7 @@ def log_new_transaction():
     tag = tag_repository.select(tag_id)
     transaction = Transaction(merchant, tag, amount)
     transaction_repository.save(transaction)
+    
 
     return redirect("/transactions")
 
