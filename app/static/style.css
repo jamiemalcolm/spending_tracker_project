@@ -12,9 +12,10 @@ body{
     border-radius: 100px;
 
 }
-
-#navbar{
+.caontainer{
     display: flex;
+}
+#navbar{
     background-color: #BFCC94;
     flex-direction: column;
     border-radius: 18px;
