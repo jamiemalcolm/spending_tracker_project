@@ -14,6 +14,8 @@ def save(transaction):
     results = run_sql(sql, values)
     id = results[0]['id']
     transaction.id = id
+    time_stamp = results[0]['time_stamp']
+    transaction.time_stamp = time_stamp
     return transaction
 # select all 
 def select_all():
@@ -25,7 +27,7 @@ def select_all():
     for row in results:
         merchant = merchant_repository.select(row['merchant_id'])
         tag = tag_repository.select(row['tag_id'])
-        transaction = Transaction(merchant, tag, row['amount'], row['id'])
+        transaction = Transaction(merchant, tag, row['amount'], row['id'], row['time_stamp'])
         transactions.append(transaction)
     return transactions
 
@@ -39,7 +41,7 @@ def select(id):
     if result is not None:
         merchant = merchant_repository.select(result['merchant_id'])
         tag = tag_repository.select(result['tag_id'])
-        transaction = Transaction(merchant, tag, result['amount'], result['id'])
+        transaction = Transaction(merchant, tag, result['amount'], result['id'], result['time_stamp'])
     return transaction
 # delete all 
 def delete_all():
@@ -53,7 +55,7 @@ def delete(id):
 # update 
 def update(transaction):
     sql = "UPDATE transactions SET (merchant_id, tag_id, amount) = (%s, %s, %s) WHERE id = %s"
-    values = [transaction.merchant.id, transaction.tag.id, transaction.amount, transaction.id]
+    values = [transaction.merchant.id, transaction.tag.id, transaction.amount, transaction.id, transaction.time_stamp]
     run_sql(sql, values) 
 
 def total():
@@ -65,7 +67,7 @@ def total():
     for row in results:
         merchant = merchant_repository.select(row['merchant_id'])
         tag = tag_repository.select(row['tag_id'])
-        transaction = Transaction(merchant, tag, row['amount'], row['id'])
+        transaction = Transaction(merchant, tag, row['amount'], row['id'], row['time_stamp'])
         pennies = int(transaction.amount * 100)
         transactions.append(pennies)
     return transactions

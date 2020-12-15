@@ -20,6 +20,6 @@ CREATE TABLE transactions (
     id SERIAL PRIMARY KEY,
     merchant_id INT REFERENCES merchants(id) ON DELETE CASCADE,
     amount FLOAT,
-    date TIMESTAMP NOT NULL DEFAULT NOW(),
+    time_stamp TIMESTAMP NOT NULL DEFAULT NOW(),
     tag_id INT REFERENCES tags(id) ON DELETE CASCADE
 );
