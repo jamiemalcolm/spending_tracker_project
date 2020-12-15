@@ -3,7 +3,11 @@
 {% block content %}
 <h1>Transactions</h1>
 
-<p>Here are all of your Transactions</p>
+<p>Here are all of your Transactions, your running total is:
+<div class="total">
+    £{{total}}
+</div>
+</p>
 
 {% for transaction in transactions %}
 <section class="trans">
@@ -24,8 +28,4 @@
 <section class="new">
     <a href="/transactions/new">Log a new Transaction</a>
 </section>
-<h2>The Total Of All Your Transactions is:</h2>
-<div class="total">
-    £{{total}}
-</div>
 {% endblock %}

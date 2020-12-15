@@ -1,18 +1,74 @@
-html{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+@media only screen and (max-device-width: 480px) {
+    body{
+        width: 100%;
+    }
+    nav > ul{
+        display: flex;
+        justify-content: space-around;
+        margin-left: -20px;
+        
+    }
 }
-
 body{
     background-color:#F0F4EF;
     color: #426A5A;
-    display: grid;
 }
-#top-box{
+.top-box{
+    border-radius: 18px;
+}
+.logo{
+    border-radius: 100px;
+
+}
+#navbar{
+    display: flex;
+    background-color: #BFCC94;
+    flex-direction: column;
+    border-radius: 18px;
+}
+.link{
+    color:  #426A5A;
+}
+nav > ul{
+    display: flex;
+    justify-content: space-around;
+    
     
 }
-
-img{
-    border-radius: 100px;
+nav > ul > li > a:active{
+    color: #426A5A;
+}
+h1{
+    background-color: #B4CDED;
+    border-radius: 18px;
+    text-align: center;
+}
+#navbar > li{
+    background-color: #B4CDED;
+    border-radius: 18px;
+}
+ul{
+    list-style: none;
+}
+.trans, .tag, .merchant, .new-merchant, .new-tag{
+    background-color: #BFCC94;
+    color: #344966;
+    border-radius: 18px;
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+}
+.new > a{
+    background-color: #B4CDED;
+    padding: 5px;
+    border-radius: 18px;
+    color: #426A5A;
+}
+.total{
+    font-size: 225%;
 }
 
+button{
+    color: #B4CDED;
+    background-color: #426A5A;
+}
