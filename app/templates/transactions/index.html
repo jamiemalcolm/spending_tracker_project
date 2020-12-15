@@ -15,7 +15,7 @@
             {{ transaction.amount }}
         </li>
         <li>
-            {{ transaction.time_stamp }}
+            {{ transaction.time_stamp.strftime("%c") }}
         </li>
     </ul>
 
