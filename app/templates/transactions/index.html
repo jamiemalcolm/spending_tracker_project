@@ -14,10 +14,10 @@
 <section class="trans">
     <ul>
         <li>
-            {{ transaction.merchant.name }} - {{ transaction.tag.category }}
+            {{ "£{:,.2f}".format(transaction.amount) }}
         </li>
         <li>
-            {{ "£{:,.2f}".format(transaction.amount) }}
+            {{ transaction.merchant.name }} - {{ transaction.tag.category }}
         </li>
         <li>
             {{ transaction.time_stamp.strftime("%c") }}
