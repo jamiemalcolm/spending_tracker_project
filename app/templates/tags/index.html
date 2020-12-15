@@ -4,7 +4,9 @@
 <h1>Spending Categories</h1>
 
 <p>Here are all your created spending tags</p>
-
+<section class="new">
+    <a href="/tags/new">Create new tag</a>
+</section>
 {% for tag in tags %}
 <section class="tag">
     <ul>
@@ -21,13 +23,11 @@
         <li>
 
             <form class="delete" action="/tags/{{tag.id}}/delete" method="POST">
-                <button>Delete Spending Category Tag</button>
+                <button>Remove Category</button>
         </li>
     </ul>
     </form>
 </section>
 {% endfor %}
-<section class="new">
-    <a href="/tags/new">Create new tag</a>
-</section>
+
 {% endblock %}

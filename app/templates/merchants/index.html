@@ -4,6 +4,9 @@
 <h1>Merchants</h1>
 
 <p>Here are all your Merchants you've added for tracking </p>
+<section class="new">
+    <a href="/merchants/new">Create new merchant</a>
+</section>
 
 {% for merchant in merchants %}
 <section class="merchant">
@@ -27,7 +30,5 @@
     </ul>
 </section>
 {% endfor %}
-<section class="new">
-    <a href="/merchants/new">Create new merchant</a>
-</section>
+
 {% endblock %}

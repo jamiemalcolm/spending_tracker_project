@@ -9,6 +9,9 @@
     {{"£{:,.2f}".format(total)}}
 </div>
 </p>
+<section class="new">
+    <a href="/transactions/new">Log a new Transaction</a>
+</section>
 
 <section class="transaction_container">
     {% for transaction in transactions %}
@@ -27,7 +30,5 @@
     </section>
 </section>
 {% endfor %}
-<section class="new">
-    <a href="/transactions/new">Log a new Transaction</a>
-</section>
+
 {% endblock %}

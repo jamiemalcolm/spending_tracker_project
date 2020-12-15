@@ -1,9 +1,16 @@
 
+@media (max-width: 600px){
+    img{
+        justify-content: center;
+
+    }
+}
 body{
-    background-color:#F0F4EF;
-    color: #426A5A;
+    background-color:#454851;
+    color: #FCEFF9;
     height: 97%;
     width: 97%;
+    font-family: 'Actor';font-size: 18px;
 }
 .top-box{
     border-radius: 18px;
@@ -13,14 +20,14 @@ body{
 
 }
 #navbar{
-    background-color: #BFCC94;
+    background-color: #FCEFF9;
     flex-direction: column;
     border-radius: 18px;
 }
 
 
 .link{
-    color:  #426A5A;
+    color:  #049a8f;
 }
 nav > ul{
     display: flex;
@@ -29,15 +36,15 @@ nav > ul{
     
 }
 nav > ul > li > a:active{
-    color: #426A5A;
+    color: #049a8f;
 }
 h1{
-    background-color: #B4CDED;
+    background-color: #049A8F;
     border-radius: 18px;
     text-align: center;
 }
 #navbar > li{
-    background-color: #B4CDED;
+    background-color: #049A8F;
     border-radius: 18px;
 }
 ul{
@@ -52,38 +59,39 @@ ul{
 }
 .trans, .tag, .merchant, .new-merchant, .new-tag{
     justify-content: center;
-    background-color: #BFCC94;
-    color: #344966;
+    background-color: #FCEFF9;
+    color: #049A8F;
     border-radius: 18px;
     padding: 10px;
     margin: 10px;
     width: 85%;
+    /* text-align: center; */
 }
 .new > a{
-    background-color: #B4CDED;
+    background-color: #049A8F;
     padding: 5px;
     border-radius: 18px;
-    color: #426A5A;
+    color: #FCEEF9;
     text-align: center;
 }
 .total{
     font-size: 225%;
 }
 .tag > ul > li > a{
-    color:#426A5A;
+    color:#049A8F;
 }
 .merchant > ul > li > a{
-    color: #426A5A;
+    color: #049A8F;
 }
 button{
-    color: #B4CDED;
-    background-color: #426A5A;
+    color: #049A8F;
+    background-color: #FCEFF9;
     text-align: center;
     border-radius: 18px;
 }
 .tag > a{
-    color: #B4CDED;
-    background-color: #426A5A;
+    color: #049A8F;
+    background-color: #FCEFF9;
     text-align: center;
     border-radius: 18px;
 }
