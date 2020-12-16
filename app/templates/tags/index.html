@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Spending Categories</h1>
+<h1>Spending Categories<i class="fas fa-shopping-cart"></i></h1>
 
 <p>Here are all your created spending tags</p>
 <section class="new">
@@ -23,7 +23,7 @@
         <li>
 
             <form class="delete" action="/tags/{{tag.id}}/delete" method="POST">
-                <button>Remove Category</button>
+                <button><i class="fas fa-trash-alt"></i></button>
         </li>
     </ul>
     </form>

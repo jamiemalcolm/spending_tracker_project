@@ -15,8 +15,9 @@ body{
 .top-box{
     border-radius: 18px;
 }
-.logo{
+.fa-home{
     border-radius: 100px;
+    color: #FCEFF9;
 
 }
 #navbar{

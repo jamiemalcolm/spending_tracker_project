@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Merchants</h1>
+<h1>Merchants <i class="fas fa-store"></i></h1>
 
 <p>Here are all your Merchants you've added for tracking </p>
 <section class="new">
@@ -23,7 +23,7 @@
         </li>
         <li>
             <form class="delete" action="/merchants/{{merchant.id}}/delete" method="POST">
-                <button>Delete Merchant</button>
+                <button><i class="fas fa-trash-alt"></i></button>
             </form>
 
         </li>

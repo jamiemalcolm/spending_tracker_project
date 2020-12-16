@@ -6,26 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link href='https://fonts.googleapis.com/css?family=Actor' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/36da704d70.js" crossorigin="anonymous"></script>
     <title>Spending Tracker</title>
 </head>
 
 <body>
     <main>
         <div class="container">
-            <h1 class="top-box">Spending Tracker</h1>
+            <h1 class="top-box">Spending Tracker <i class="fas fa-chart-line"></i></h1>
             <div class="logo">
-                <a href="/"><img class="logo" src="https://picsum.photos/id/252/175/175"></a>
+                <a href="/"><i class="fas fa-home fa-10x"></i></a>
             </div>
             <nav id="navbar">
                 <ul>
                     <li>
-                        <a class="link" href="/transactions">Transactions</a>
+                        <a class="link" href="/transactions">Transactions <i class="fas fa-cash-register"></i></a>
                     </li>
                     <li>
-                        <a class="link" href="/tags">Categories</a>
+                        <a class="link" href="/tags">Categories <i class="fas fa-shopping-cart"></i></a>
                     </li>
                     <li>
-                        <a class="link" href="/merchants">Merchants</a>
+                        <a class="link" href="/merchants">Merchants <i class="fas fa-store"></i></a>
                     </li>
                     <!-- <li>
                         <a class="link" href="/total">Total Spend</a>

@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Transactions</h1>
+<h1>Transactions <i class="fas fa-cash-register"></i></h1>
 
 <p>Here are all of your Transactions</p>
 <p>Your Running Total Is: </p>
 <div class="total">
-    {{"£{:,.2f}".format(total)}}
+    {{"£{:,.2f}".format(total)}} <i class="fas fa-money-bill-wave"></i>
 </div>
 </p>
 <section class="new">
