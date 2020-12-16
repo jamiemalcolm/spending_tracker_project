@@ -24,7 +24,6 @@ def create_new_tag():
 
     return redirect("/tags")
 
-# add edit route and allow user to edit tag, make active false and/or delete
 
 @tags_blueprint.route("/tags/<id>", methods=['GET'])
 def show_this_tag(id):

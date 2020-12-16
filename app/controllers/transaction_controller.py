@@ -37,7 +37,7 @@ def log_new_transaction():
     
     return redirect("/transactions")
 
-
+# might not need this route...
 @transactions_blueprint.route("/total")
 def total():
     transactions = transaction_repository.select_all()

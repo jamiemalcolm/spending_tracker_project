@@ -5,7 +5,6 @@ from models.merchant import Merchant
 from models.tag import Tag
 import repositories.merchant_repository as merchant_repository
 import repositories.tag_repository as tag_repository
-# write sql functions
 
 # save 
 def save(transaction):
@@ -57,7 +56,7 @@ def update(transaction):
     sql = "UPDATE transactions SET (merchant_id, tag_id, amount) = (%s, %s, %s) WHERE id = %s"
     values = [transaction.merchant.id, transaction.tag.id, transaction.amount, transaction.id, transaction.time_stamp]
     run_sql(sql, values) 
-
+# get total of all transactions 
 def total():
     transactions = []
 
@@ -71,4 +70,4 @@ def total():
         pennies = int(transaction.amount * 100)
         transactions.append(pennies)
     return transactions
-
+    

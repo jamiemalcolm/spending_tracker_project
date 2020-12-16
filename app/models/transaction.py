@@ -6,8 +6,3 @@ class Transaction:
         self.amount = amount
         self.id = id
         self.time_stamp = time_stamp
-
-
-    
-
-        
