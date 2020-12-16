@@ -51,21 +51,14 @@ ul{
     list-style: none;
 }
 
-.transaction_caontainer{
-    display: flex;
-    flex-wrap: wrap;
-    width: 300px;
-    margin: 0 auto;
-}
 .trans, .tag, .merchant, .new-merchant, .new-tag{
-    justify-content: center;
     background-color: #FCEFF9;
     color: #049A8F;
     border-radius: 18px;
     padding: 10px;
     margin: 10px;
     width: 85%;
-    /* text-align: center; */
+    text-align: center;
 }
 .new > a{
     background-color: #049A8F;
