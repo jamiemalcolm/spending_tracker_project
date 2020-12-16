@@ -1,7 +1,6 @@
 
 @media (max-width: 600px){
-    img{
-        justify-content: center;
+    
 
     }
 }
@@ -51,7 +50,41 @@ h1{
 ul{
     list-style: none;
 }
-
+.grid-header{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 30px;
+    grid-template-rows: auto;
+    justify-content: center;
+    grid-auto-flow: column;
+    position: relative;
+}
+.header-heading{
+    grid-row-start: 1;
+    grid-column: 1/2;
+}
+.header-navigation{
+    grid-column: 7/13;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 30px;
+    grid-template-rows: auto;
+    justify-content: center;
+    grid-auto-flow: column;
+    margin-top:20px;
+}
+.header-navigaton-link-transaction{
+    grid-row-start: 1;
+    grid-column: 1/1;
+}
+.header-navigation-link-category{
+    grid-row-start: 1;
+    grid-column: 2/2;
+}
+.header-navigation-link-merchant{
+    grid-row-start: 1;
+    grid-column: 3/3;
+}
 .trans, .tag, .merchant, .new-merchant, .new-tag{
     background-color: #FCEFF9;
     color: #049A8F;
