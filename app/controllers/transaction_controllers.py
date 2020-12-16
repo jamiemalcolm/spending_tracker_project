@@ -45,4 +45,3 @@ def total():
     total = sum(all_amounts) / 100
     return render_template("/transactions/total.html", transactions = transactions, total = total)
 
-

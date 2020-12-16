@@ -12,38 +12,27 @@
 
 <body>
     <main>
-        <div class="grid-header">
-            <div class="header-heading">
-                <a href="/"><i class="fas fa-home fa-6x"></i></a>
-            </div>
-
-
-            <nav class="header-navigation">
-                <div class="header-navigaton-link-transaction">
-                    <a class="link" href="/transactions">Transactions <i class="fas fa-cash-register"></i></a>
-                </div>
-                <div class="header-navigation-link-category">
-                    <a class="link" href="/tags">Categories <i class="fas fa-shopping-cart"></i></a>
-                </div>
-                <div class="header-navigation-link-merchant">
-
-                    <a class="link" href="/merchants">Merchants <i class="fas fa-store"></i></a>
-                </div>
-                <!-- <ul>
-                        <li>
-                        </li>
-                        <li>
-                        </li>
-                        <li>
-                        </li>
-                    </ul> -->
-            </nav>
-
-            <!-- <h1 class="top-box">Spending Tracker <i class="fas fa-chart-line"></i></h1>
-             -->
-            <!-- <div class="logo">
+        <div class="container">
+            <h1 class="top-box">Spending Tracker <i class="fas fa-chart-line"></i></h1>
+            <div class="logo">
                 <a href="/"><i class="fas fa-home fa-10x"></i></a>
-            </div> -->
+            </div>
+            <nav id="navbar">
+                <ul>
+                    <li>
+                        <a class="link" href="/transactions">Transactions <i class="fas fa-cash-register"></i></a>
+                    </li>
+                    <li>
+                        <a class="link" href="/tags">Categories <i class="fas fa-shopping-cart"></i></a>
+                    </li>
+                    <li>
+                        <a class="link" href="/merchants">Merchants <i class="fas fa-store"></i></a>
+                    </li>
+                    <!-- <li>
+                        <a class="link" href="/total">Total Spend</a>
+                    </li> -->
+                </ul>
+            </nav>
         </div>
         <section id="content">
             {% block content %}

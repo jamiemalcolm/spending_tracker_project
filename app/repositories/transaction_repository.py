@@ -70,4 +70,4 @@ def total():
         pennies = int(transaction.amount * 100)
         transactions.append(pennies)
     return transactions
-    
+
